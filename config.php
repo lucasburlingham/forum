@@ -1,16 +1,13 @@
 <?php
-define('DB_SERVER', '195.201.179.80:2222');
-define('DB_USERNAME', 'xenonmcx_agent');
-// define('DB_USERNAME', 'test');
-// define('DB_PASSWORD', 'test');
-
-define('DB_PASSWORD', 'wVoiwdt1');
+define('DB_SERVER', '10.0.0.21');
+define('DB_USERNAME', 'phpmyadmin');
+define('DB_PASSWORD', 'lcauser-LB1');
 define('DB_NAME', 'xenonmcx_xframe');
 
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-echo DB_SERVER . DB_USERNAME . DB_PASSWORD . DB_NAME;
+// echo DB_SERVER . DB_USERNAME . DB_PASSWORD . DB_NAME;
 echo "<br>";
 // Check connection
 if ($link === false) {
