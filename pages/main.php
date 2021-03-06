@@ -3,7 +3,7 @@
 
 <head>
     <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
-    <?php include "includes/includes.php"; ?>
+    <?php include "/includes/includes.php"; ?>
     <title>XForums Development Team</title>
 </head>
 
