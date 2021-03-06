@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER', '10.0.0.21');
+define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'phpmyadmin');
 define('DB_PASSWORD', 'lcauser-LB1');
 define('DB_NAME', 'xenonmcx_xframe');
