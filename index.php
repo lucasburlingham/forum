@@ -1,14 +1,11 @@
 <?php
 
-require "auth.php";
+require "welcome.php";
 
-include "utils/template.php";
-
-if (isset($_GET)) {
+if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
-    template($topic_ID);
 } else {
-    // readfile("/pages/main.html");
+    // include "/pages/main.php";
 }
 
-readfile("/pages/main.html");
+// include "/pages/main.html";
