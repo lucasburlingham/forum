@@ -142,6 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
             </div>
+            <div class="col"></div>
         </div>
     </div>
 
