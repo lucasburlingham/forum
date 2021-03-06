@@ -142,7 +142,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="col"></div>
     </div>
-
 </body>
 
 </html>
