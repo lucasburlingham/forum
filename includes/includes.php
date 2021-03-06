@@ -1,6 +1,7 @@
 <?php
 
-echo '
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -13,5 +14,24 @@ echo '
     <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon" />
 </head>
 
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+        new Crate({
+            server: '765395501331120168',
+            channel: '800154146434056192',
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <!-- Statuspage  -->
+    <script src="https://rpl357kc8bzh.statuspage.io/embed/script.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
+    <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
 
-</html>';
+    <!-- bootstrap dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
