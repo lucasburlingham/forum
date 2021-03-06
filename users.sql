@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `users`
 --
 
+CREATE DATABASE `xenonmcx_users`;
+
 CREATE TABLE IF NOT EXISTS `xforum_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,

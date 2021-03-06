@@ -14,9 +14,9 @@ if (isset($_GET['ID'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" async>
-        <link rel="stylesheet/less" type="text/css" href="/assets/css/styles.less" />
+        <link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
         <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
-        <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon" />
+        <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon" />
         <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
         <title>XForums Development Team</title>
     </head>
@@ -25,7 +25,7 @@ if (isset($_GET['ID'])) {
         <section id="navbar">
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="/assets/images/logo.webp" alt="XENONMC Logo: Green Lightning Bolt on a Black background">
+                    <img src="assets/images/logo.jpg" alt="XENONMC Logo: Green Lightning Bolt on a Black background">
                     XForum</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,12 +43,6 @@ if (isset($_GET['ID'])) {
                             <div class="dropdown-menu bg-dark" aria-labelledby="contactDropdown">
                                 <a class="dropdown-item text-discord" href="https://discord.gg/jFEWYnDW6y"><i class="fab fa-discord"></i> Discord</a>
                                 <a class="dropdown-item text-github" href="https://github.com/xenonmc-dev"><i class="fab fa-github-square"></i> Github</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="devDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev Links</a>
-                            <div class="dropdown-menu bg-dark" aria-labelledby="devDropdown">
-                                <button onclick="addOutput()" class="dropdown-item text-github">Pull Site</button>
                             </div>
                         </li>
                     </ul>
