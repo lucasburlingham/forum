@@ -110,40 +110,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col">
             </div>
             <div class="col-6">
-
-                <div class="centered">
-                    <h2>Login</h2>
-                    <p>Please fill in your credentials to login.</p>
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                            <label>Username</label>
-                            <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                            <span class="help-block"><?php echo $username_err; ?></span>
-                        </div>
-                        <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                            <label>Password</label>
-                            <input type="password" name="password" class="form-control">
-                            <span class="help-block"><?php echo $password_err; ?></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-primary" value="Login">
-                        </div>
-                        <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-                    </form>
-                </div>
-                <!-- Statuspage  -->
-                <script src="https://rpl357kc8bzh.statuspage.io/embed/script.js"></script>
-                <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
-                <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
-
-                <!-- bootstrap dependencies -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-                </script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+                <h2>Login</h2>
+                <p>Please fill in your credentials to login.</p>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                        <label>Username</label>
+                        <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                        <span class="help-block"><?php echo $username_err; ?></span>
+                    </div>
+                    <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control">
+                        <span class="help-block"><?php echo $password_err; ?></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Login">
+                    </div>
+                    <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+                </form>
             </div>
-            <div class="col"></div>
+            <!-- Statuspage  -->
+            <script src="https://rpl357kc8bzh.statuspage.io/embed/script.js"></script>
+            <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
+            <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
+
+            <!-- bootstrap dependencies -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
         </div>
+        <div class="col"></div>
     </div>
 
 </body>
