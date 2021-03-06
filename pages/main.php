@@ -2,16 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" async>
-    <!-- load sheet then javascript -->
-    <link rel="stylesheet/less" type="text/css" href="/assets/css/styles.less" />
-    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+    <?php include "includes/includes.php"; ?>
     <title>XForums Development Team</title>
-    <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon">
 </head>
 
 <body class="bg-carbon">
@@ -53,16 +46,12 @@
     <section id="jumbotron-welcome">
         <div class="jumbotron jumbotron-fluid bg-dark">
             <div class="container">
-                <h1 class="display-3 text-gradient">XenonMC Development</h1>
-                <p class="lead text-light">Young Developers in the making.</p>
-                <hr class="my-2">
-                <!-- filler div for centering the team member cards on most screens -->
-                <div id="teamMembers_centered"></div>
-                <p class="text-secondary">(Stay tuned for our first release <abbr>04/18/2021</abbr>!)</p>
-                <p class="lead">
-                    <a class="btn btn-outline-success" href="https://github.com/XENONMC-DEV/">
-                        <img src="/assets/images/GitHub-Mark-Light-32px.png" alt="Github mark" height="17em"> Github</a>
-                </p>
+                <div class="page-header">
+                    <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+                </div>
+                <p>
+                    <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+                    <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
             </div>
         </div>
     </section>
