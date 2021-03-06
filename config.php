@@ -1,9 +1,9 @@
 <?php
-define('DB_SERVER', '195.201.179.80:2222');
-// define('DB_USERNAME', 'xenonmcx_agent');
-define('DB_USERNAME', 'test');
-define('DB_PASSWORD', 'test');
-// define('DB_PASSWORD', 'wVoiwdt1');
+define('DB_SERVER', '195.201.179.80');
+define('DB_USERNAME', 'xenonmcx_agent');
+// define('DB_USERNAME', 'test');
+// define('DB_PASSWORD', 'test');
+define('DB_PASSWORD', 'wVoiwdt1');
 define('DB_NAME', 'xenonmcx_xframe');
 
 /* Attempt to connect to MySQL database */
