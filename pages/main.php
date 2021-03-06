@@ -281,7 +281,6 @@
             </div>
         </footer>
     </section>
-    <!-- discord integration -->
 
 
 </body>
