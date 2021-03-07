@@ -10,6 +10,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 // Include config file
 require_once "config.php";
+define("RECAPTCHA_V3_SECRET_KEY", '6Lek93QaAAAAAGPoQfYX2Z3HD0mtFEHWv27oL6Bv');
 
 // Define variables and initialize with empty values
 $username = $password = $theme = "";
@@ -102,6 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
     <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon" />
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -124,6 +128,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="password" name="password" class="form-control">
                         <span class="help-block"><?php echo $password_err; ?></span>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6LdpSSIaAAAAAKCYLKeaXdmAn6pyt5n1Zkm7Du1e"></div>
+                    <br>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Login">
                     </div>
