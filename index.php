@@ -350,4 +350,5 @@ function displayPost($topic_ID)
         mysqli_free_result($result);
     }
     // $topic_TITLE = $row;
+    return;
 }
