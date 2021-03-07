@@ -343,11 +343,14 @@ function displayPost($topic_ID)
 {
     require_once "config.php";
     $sql = "SELECT * FROM xenonmcx_xframe.content where topic_ID = $topic_ID";
+    echo $sql;
     if ($result = mysqli_query($conn, $sql)) {
         // Fetch one and one row
         $row = mysqli_fetch_row($result);
         echo "$row";
         mysqli_free_result($result);
+    } else {
+        echo "ERROR: Query could not be made.";
     }
     // $topic_TITLE = $row;
     return;
