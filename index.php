@@ -3,7 +3,6 @@
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
-    require_once "auth.php";
     displayPost($topic_ID);
 } else {
 ?>
