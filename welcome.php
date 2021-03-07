@@ -48,9 +48,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="devDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev Links</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="devDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="devDropdown">
-                            <button onclick="addOutput()" class="dropdown-item text-github">Pull Site</button>
+                            <button href="logout.php" class="btn btn-danger">Sign Out of Your Account</button>
                         </div>
                     </li>
                 </ul>
@@ -59,14 +59,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </section>
     <section id="jumbotron-welcome">
         <div class="jumbotron jumbotron-fluid bg-dark">
-            <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?>
-                </b>. Welcome to our site.</h1>
+            <h1 class="display-4">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
+                <hr class="my-4">
+                <p class="lead">
+                    Welcome to our forum.
+                </p>
+            </h1>
         </div>
-        <p>
-            <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-            <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-            </div>
-            </div>
     </section>
     <section id="teamMembers">
         <div class="container">

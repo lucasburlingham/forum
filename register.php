@@ -61,35 +61,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // Check input errors before inserting in database
-    if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
 
-        // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+    // Set color scheme
+    // Prepare an insert statement
+    $sql = "INSERT INTO users (theme) VALUES (?, ?)";
 
-        if ($stmt = mysqli_prepare($link, $sql)) {
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+    if ($stmt = mysqli_prepare($link, $sql)) {
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "ss", $param_theme);
 
-            // Set parameters
-            $param_username = $username;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-
-            // Attempt to execute the prepared statement
-            if (mysqli_stmt_execute($stmt)) {
-                // Redirect to login page
-                header("location: login.php");
-            } else {
-                echo "Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            mysqli_stmt_close($stmt);
+        // Attempt to execute the prepared statement
+        if (mysqli_stmt_execute($stmt)) {
+            // Redirect to login page
+            header("location: login.php");
+        } else {
+            echo "Something went wrong. Please try again later.";
         }
+        // Close statement
+        mysqli_stmt_close($stmt);
     }
-
     mysqli_close($link);
 }
+
+
+// Check input errors before inserting in database
+if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
+
+    // Prepare an insert statement
+    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+
+    if ($stmt = mysqli_prepare($link, $sql)) {
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+
+        // Set parameters
+        // Attempt to execute the prepared statement
+        if (mysqli_stmt_execute($stmt)) {
+            // Redirect to login page
+            header("location: login.php");
+        } else {
+            echo "Something went wrong. Please try again later.";
+        }
+
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+}
+
+mysqli_close($link);
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet/less" type="text/css" href="/assets/css/styles.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
     <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon" />
-    <title>Sign Up</title>
+    <title>XForum: Sign Up</title>
 
 </head>
 
@@ -135,6 +154,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <input type="reset" class="btn btn-default" value="Reset">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Application Color Scheme
+                            <small>You can always change this later...</small>
+                        </label>
+                        <small>Dark Modes:</small>
+                        <input class="form-check-input" type="radio" name="theme" id="darkBSRadio" value="darkbs" checked>
+                        <label class="form-check-label" for="darkBSRadio">Dark Bootstrap</label>
+                        <hr>
+                        <input class="form-check-input" type="radio" name="theme" id="darkMATRadio" value="darkmat" checked>
+                        <label class="form-check-label" for="darkMATRadio">Dark Material</label>
+                        <small>Light Modes:</small>
+                        <input class="form-check-input" type="radio" name="theme" id="lightBSRadio" value="lightbs" checked>
+                        <label class="form-check-label" for="lightBSRadio">Light Bootstrap</label>
+                        <hr>
+                        <input class="form-check-input" type="radio" name="theme" id="lightMATRadio" value="lightmat" checked>
+                        <label class="form-check-label" for="lightMATRadio">Light Material</label>
                     </div>
                     <p>Already have an account? <a href="login.php">Login here</a>.</p>
                 </form>
