@@ -1,12 +1,5 @@
 <?php
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
+require_once "auth.php";
 
 ?>
 <!DOCTYPE html>
@@ -64,12 +57,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     </section>
     <section id="jumbotron-welcome">
         <div class="jumbotron jumbotron-fluid bg-dark">
-            <h1 class="display-4">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
-                <hr class="my-4">
-                <p class="lead">
-                    Welcome to our forum.
-                </p>
-            </h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-7">
+                        <h1 class="display-4">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
+                            <hr class="my-4">
+                            <p class="lead padding-left">
+                                Welcome to our forum.
+                            </p>
+                        </h1>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -1,31 +1,33 @@
 <?php
 
-require "welcome.php";
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
+    require_once "auth.php";
 } else {
 ?>
+
     <!DOCTYPE html>
     <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" async>
+        <!-- load sheet then javascript -->
         <link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
         <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
-        <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon" />
-        <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
         <title>XForums Development Team</title>
+        <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
     </head>
 
     <body class="bg-carbon">
         <section id="navbar">
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.jpg" alt="XENONMC Logo: Green Lightning Bolt on a Black background">
+                    <img src="assets/images/logo.webp" alt="XENONMC Logo: Green Lightning Bolt on a Black background">
                     XForum</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,21 +47,26 @@ if (isset($_GET['ID'])) {
                                 <a class="dropdown-item text-github" href="https://github.com/xenonmc-dev"><i class="fab fa-github-square"></i> Github</a>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-success" href="login.php">Login</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </section>
-        <!-- Terminal Output Modal -->
-        <div id="jsInsertTerminal"></div>
         <section id="jumbotron-welcome">
             <div class="jumbotron jumbotron-fluid bg-dark">
                 <div class="container">
-                    <div class="page-header">
-                        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-                    </div>
-                    <p>
-                        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-                        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+                    <h1 class="display-3 text-gradient">XenonMC Development</h1>
+                    <p class="lead text-light">Young Developers in the making.</p>
+                    <hr class="my-2">
+                    <!-- filler div for centering the team member cards on most screens -->
+                    <div id="teamMembers_centered"></div>
+                    <p class="text-secondary">(Stay tuned for our first release <abbr>04/18/2021</abbr>!)</p>
+                    <p class="lead">
+                        <a class="btn btn-outline-success" href="https://github.com/XENONMC-DEV/">
+                            <img src="/assets/images/GitHub-Mark-Light-32px.png" alt="Github mark" height="17em"> Github</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -92,7 +99,7 @@ if (isset($_GET['ID'])) {
                                 <h5 class="card-title">Lucas Burlingham</h5>
                                 <p class="card-text">Youth developer in the USA, IT Support Technician
                                 </p>
-                                <a href="https://lucasburlingham.me/" class="btn btn-primary">Profile</a>
+                                <a href="https://lucasburlingham.me/" class="btn btn-primary">Resume</a>
                             </div>
                         </div>
                     </div>
@@ -131,7 +138,7 @@ if (isset($_GET['ID'])) {
                                     <p class="card-text text-secondary">The All-In-One, Self-Hosted forum.</p>
                                     <small class="text-dark">Waiting on Framework...</small>
                                     <div class="progress text-dark">
-                                        <div class="progress-bar bg-success text-dark" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success text-dark" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                             0%
                                         </div>
                                     </div>
@@ -160,8 +167,8 @@ if (isset($_GET['ID'])) {
                                     <p class="card-text text-secondary">The driving force of all our services.</p>
                                     <small class="text-dark">In Progress...</small>
                                     <div class="progress text-dark">
-                                        <div class="progress-bar bg-success text-light" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                            80%
+                                        <div class="progress-bar bg-success text-light" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                            85%
                                         </div>
                                     </div>
                                 </div>
@@ -174,11 +181,11 @@ if (isset($_GET['ID'])) {
                                 <div class="card-body">
                                     <h5 class="card-title text-dark">Database</h5>
                                     <hr>
-                                    <p class="card-text text-secondary">Backend in MySQL</p>
-                                    <small class="text-dark">Being designed...</small>
+                                    <p class="card-text text-secondary">MySQL Database</p>
+                                    <small class="text-dark">Looking for reliable hosting options...</small>
                                     <div class="progress text-dark">
-                                        <div class="progress-bar bg-success text-light" style="width: 60%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                            60%
+                                        <div class="progress-bar bg-success text-light" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                            90%
                                         </div>
                                     </div>
                                 </div>
@@ -190,18 +197,40 @@ if (isset($_GET['ID'])) {
         </section>
         <section id="goals">
             <div class="jumbotron bg-secondary">
-                <h1 class="text-light">Our Goals: <kbd>v1.1_alpha</kbd></h1>
-                <div class="rounded-black">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="bg-dark markdown" id="markdown">
-                                    # Hey
+                <h1>Our Goals: <kbd>v1.1_alpha</kbd></h1>
+                <ul>
+                    <li>Custom Markdown Support:</li>
+                    <div class="rounded-black">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <pre class="bg-dark">
+
+
+    Hey everyone! This is the first post ever! 
+    I would like to run some tests.
+    Obviously, there is some text here. There is a line break. There is some more text.
+    Here is a link: (https://github.com)[Github.com]. Our goal is to make it so you only see: Github.com, and not what I
+    said before.
+
+
+    Well, au revoir peeps!
+
+    Lucas Burlingham,
+          Database, Server, and Project Manager, as well as Frontend developer.
+
+                        </pre>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <li>Basic Forum</li>
+                    <small>
+                        Yeah. Basically think Reddit (R), but not as nice and refined.
+                    </small>
+
+                </ul>
+
             </div>
         </section>
         <section id="footer">
@@ -289,14 +318,13 @@ if (isset($_GET['ID'])) {
                 </div>
             </footer>
         </section>
-
+        <!-- discord integration -->
         <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
             new Crate({
                 server: '765395501331120168',
                 channel: '800154146434056192',
             })
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
         <!-- Statuspage  -->
         <script src="https://rpl357kc8bzh.statuspage.io/embed/script.js"></script>
         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
@@ -305,7 +333,6 @@ if (isset($_GET['ID'])) {
         <!-- bootstrap dependencies -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     </body>
 
