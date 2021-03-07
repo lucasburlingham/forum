@@ -51,7 +51,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="devDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
                         <div class="dropdown-menu bg-dark" aria-labelledby="devDropdown">
-                            <button href="logout.php" class="btn btn-danger">Sign Out of Your Account</button>
+                            <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
                         </div>
                     </li>
                 </ul>
