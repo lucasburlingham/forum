@@ -104,8 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
     <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon" />
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 </head>
 
 <body>
@@ -128,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="password" name="password" class="form-control">
                         <span class="help-block"><?php echo $password_err; ?></span>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LdpSSIaAAAAAKCYLKeaXdmAn6pyt5n1Zkm7Du1e"></div>
+                    <div class="g-recaptcha" data-sitekey="6LeQA3UaAAAAAFVjSwSm2ImYdqz5NgL_9wwD3Uj7"></div>
                     <br>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Login">
