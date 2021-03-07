@@ -27,7 +27,7 @@ if (isset($_GET['ID'])) {
         <section id="navbar">
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.webp" alt="XENONMC Logo: Green Lightning Bolt on a Black background">
+                    <img src="assets/images/logo.jpg" alt="XENONMC Logo: Green Lightning Bolt on a Black background">
                     XForum</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,7 @@ if (isset($_GET['ID'])) {
                     <p class="text-secondary">(Stay tuned for our first release <abbr>04/18/2021</abbr>!)</p>
                     <p class="lead">
                         <a class="btn btn-outline-success" href="https://github.com/XENONMC-DEV/">
-                            <img src="/assets/images/GitHub-Mark-Light-32px.png" alt="Github mark" height="17em"> Github</a>
+                            <img src="assets/images/GitHub-Mark-Light-32px.png" alt="Github mark" height="17em"> Github</a>
                     </p>
                 </div>
             </div>
@@ -197,9 +197,9 @@ if (isset($_GET['ID'])) {
         </section>
         <section id="goals">
             <div class="jumbotron bg-secondary">
-                <h1>Our Goals: <kbd>v1.1_alpha</kbd></h1>
+                <h1 class="text-light">Our Goals: First Release</h1>
                 <ul>
-                    <li>Custom Markdown Support:</li>
+                    <li class="text-light">Custom Markdown Support:</li>
                     <div class="rounded-black">
                         <div class="container">
                             <div class="row">
@@ -224,9 +224,9 @@ if (isset($_GET['ID'])) {
                             </div>
                         </div>
                     </div>
-                    <li>Basic Forum</li>
+                    <li class="text-light">Basic Forum</li>
                     <small>
-                        Yeah. Basically think Reddit (R), but not as nice and refined.
+                        Yeah. Basically think Reddit, but not as nice and refined.
                     </small>
 
                 </ul>
