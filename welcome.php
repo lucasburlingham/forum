@@ -49,10 +49,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="devDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="devDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="accountDropdown">
+                            <a href="profile.php" class="btn btn-info">Personal Profile</a>
+                            <a href="settings.php" class="btn btn-info">Manage Your Settings</a>
+                            <hr>
                             <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
                         </div>
+
                     </li>
                 </ul>
             </div>
