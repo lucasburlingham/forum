@@ -139,7 +139,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col"></div>
         </div>
     </div>
-
+    <!-- Google reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+            grecaptcha.render('html_element', {
+                'sitekey': '6LeQA3UaAAAAAFVjSwSm2ImYdqz5NgL_9wwD3Uj7'
+            });
+        };
+    </script>
     <!-- Statuspage  -->
     <script src="https://rpl357kc8bzh.statuspage.io/embed/script.js"></script>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
