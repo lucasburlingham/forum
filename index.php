@@ -3,7 +3,8 @@
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
-    header("location: login.php");
+    require_once "auth.php";
+    displayPost($topic_ID);
 } else {
 ?>
 
@@ -225,7 +226,7 @@ if (isset($_GET['ID'])) {
                         </div>
                     </div>
                     <li class="text-light">Basic Forum</li>
-                    <small>
+                    <small class="text-light">
                         Yeah. Basically think Reddit, but not as nice and refined.
                     </small>
 
@@ -338,3 +339,16 @@ if (isset($_GET['ID'])) {
 
     </html>
 <?php }
+
+function displayPost($topic_ID)
+{
+    require_once "config.php";
+    $sql = "SELECT * FROM xenonmcx_xframe.content where topic_ID = $topic_ID";
+    if ($result = mysqli_query($conn, $sql)) {
+        // Fetch one and one row
+        $row = mysqli_fetch_row($result);
+        echo "$row";
+        mysqli_free_result($result);
+    }
+    // $topic_TITLE = $row;
+}

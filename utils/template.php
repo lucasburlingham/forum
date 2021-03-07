@@ -47,18 +47,10 @@ function template($topic_ID)
                             <a class="dropdown-item text-github" href="https://github.com/xenonmc-dev"><i class="fab fa-github-square"></i> Github</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="devDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dev Links</a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="devDropdown">
-                            <button onclick="addOutput()" class="dropdown-item text-github">Pull Site</button>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </nav>
     </section>
-    <!-- Terminal Output Modal -->
-    <div id="jsInsertTerminal"></div>
     <section id="jumbotron-welcome">
         <div class="jumbotron jumbotron-fluid bg-dark">
             <div class="container">
@@ -75,147 +67,11 @@ function template($topic_ID)
             </div>
         </div>
     </section>
-    <section id="teamMembers">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="card card-animated mr-2 card-dark">
-                        <div class="card-header bg-dark text-info">
-                            Owner & Backend Developer
-                        </div>
-                        <div class="card-body text-light bg-darker">
-                            <h5 class="card-title">XfaonMC</h5>
-                            <p class="card-text">Youth developer in the USA. Student by day, developer by night.
-                            </p>
-                            <a href="#" class="btn btn-primary disabled">Awaiting Approval...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card-animated mr-2 ml-2 card-dark">
-                        <div class="card-header bg-dark text-info">
-                            Server & Project Manager, Frontend
-                        </div>
-                        <div class="card-body text-light bg-darker">
-                            <div class="card-img">
-                                <img src="https://golca.org/resources/profile.jpg" alt="Lucas\' Profile Picture" class="centered rounded mx-auto d-block img-fluid img-thumbnail" width="40%">
-                            </div>
-                            <hr>
-                            <h5 class="card-title">Lucas Burlingham</h5>
-                            <p class="card-text">Youth developer in the USA, IT Support Technician
-                            </p>
-                            <a href="https://lucasburlingham.me/" class="btn btn-primary">Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card-animated ml-2 card-dark">
-                        <div class="card-header bg-dark text-info">
-                            Discord & Minecraft Moderator
-                        </div>
-                        <div class="card-body text-light bg-darker">
-                            <h5 class="card-title">MrTechGuy</h5>
-                            <p class="card-text">The elusive MrTechGuy can be found in the depths of Discord...
-                            </p>
-                            <a href="#" class="btn btn-primary disabled">Awaiting Approval...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="padding-bottom"></div>
-    </section>
-    <section id="progress padding-bottom">
-        <div class="jumbotron-fluid bg-dark">
-            <br>
-            <h1 class="centered">XForums Series Progress</h1>
-            <p class="centered text-light">
-                <small>Please note that this product is <b>not</b> production ready, and should be considered in
-                    alpha testing.</small>
-            </p>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-4 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">XForums</h5>
-                                <hr>
-                                <p class="card-text text-secondary">The All-In-One, Self-Hosted forum.</p>
-                                <small class="text-dark">Waiting on Framework...</small>
-                                <div class="progress text-dark">
-                                    <div class="progress-bar bg-success text-dark" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                        0%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">XenonMC Minecraft Server</h5>
-                                <hr>
-                                <p class="card-text text-secondary">Minecraft Java Server, all for you.</p>
-                                <small class="text-dark">Looking for Hosting Platform...</small>
-                                <div class="progress text-dark">
-                                    <div class="progress-bar bg-success text-light" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="1">0%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-4 col-lg-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Framework</h5>
-                                <hr>
-                                <p class="card-text text-secondary">The driving force of all our services.</p>
-                                <small class="text-dark">In Progress...</small>
-                                <div class="progress text-dark">
-                                    <div class="progress-bar bg-success text-light" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                        80%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mx-auto col-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title text-dark">Database</h5>
-                                <hr>
-                                <p class="card-text text-secondary">Backend in MySQL</p>
-                                <small class="text-dark">Being designed...</small>
-                                <div class="progress text-dark">
-                                    <div class="progress-bar bg-success text-light" style="width: 60%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                        60%
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="goals">
-        <div class="jumbotron bg-secondary">
-            <h1 class="text-light">Our Goals: <kbd>v1.1_alpha</kbd></h1>
-            <div class="rounded-black">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="bg-dark" id="markdown"># Hey
-                            </div>
-                            <div class="bg-dark" id="markdown">## Hey, h2
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="topicDisplay">
+        <h1>
+            <?php echo "$topic_TITLE"; ?>
+        </h1>
+
     </section>
     <section id="footer">
         <footer class="bg-dark padding-up padding-bottom">
