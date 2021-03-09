@@ -346,20 +346,10 @@ function displayPost($topic_ID)
     echo "The topic ID is: " . $topic_ID . "<br>";
     $sql = "SELECT * FROM xenonmcx_xframe.content where `topic_ID` = 1";
     echo $sql . "<br>";
-    // $result = mysqli_query($conn, $sql);
-    // mysqli_fetch_all($result, MYSQLI_ASSOC);
-    // mysqli_free_result($result);
-    // echo $result;
+
     echo 'Connected successfully<br>';
     $result = mysqli_query($conn, $sql);
     echo "Result: " . $result . "<br>";
-    // if (mysqli_num_rows($result) > 0) {
-    //     while ($row = mysqli_fetch_assoc($result)) {
-    //         echo "Content: " . $row["topic_CONTENT"] . "<br>";
-    //     }
-    // } else {
-    //     echo "0 results";
-    // }
     $row = mysqli_fetch_assoc($result);
     var_dump($row);
     echo "Result: " . $result;
