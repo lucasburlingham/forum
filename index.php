@@ -344,12 +344,9 @@ function displayPost($topic_ID)
     require_once "config.php";
     $sql = "SELECT * FROM xenonmcx_xframe.content where topic_ID = $topic_ID";
     echo $sql;
-    $result = mysqli_query($conn, $sql);
-    // Fetch one and one row
-    $row = mysqli_fetch_row($result);
-    echo "$row";
-    mysqli_free_result($result);
+    $result = mysqli_query($con, $sql);
 
-    // $topic_TITLE = $row;
-    return;
+    mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    echo $result;
 }
