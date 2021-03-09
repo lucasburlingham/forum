@@ -360,4 +360,5 @@ function displayPost($topic_ID)
     //     echo "0 results";
     // }
     $row = mysqli_fetch_assoc($result);
+    echo $row;
 }
