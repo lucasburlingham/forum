@@ -343,7 +343,7 @@ if (isset($_GET['ID'])) {
 function displayPost($topic_ID)
 {
     require_once "config.php";
-    $sql = "SELECT * FROM content WHERE topic_ID = $topic_ID";
+    $sql = "SELECT topic_CONTENT FROM `content` where `topic_ID` = $topic_ID";
     // echo $sql;
     // $result = mysqli_query($conn, $sql);
     // mysqli_fetch_all($result, MYSQLI_ASSOC);
