@@ -3,7 +3,7 @@
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
-    echo "The topic ID is: " . $topic_ID;
+    echo "The topic ID is: " . $topic_ID . "<br>";
     displayPost($topic_ID);
 } else {
 ?>
@@ -343,7 +343,7 @@ if (isset($_GET['ID'])) {
 function displayPost($topic_ID)
 {
     require_once "config.php";
-    echo "The topic ID is: " . $topic_ID;
+    echo "The topic ID is: " . $topic_ID . "<br>";
     $sql = "SELECT * FROM `content` where `topic_ID` = $topic_ID";
     echo $sql;
     // $result = mysqli_query($conn, $sql);
@@ -352,7 +352,7 @@ function displayPost($topic_ID)
     // echo $result;
     echo 'Connected successfully<br>';
     $result = mysqli_query($conn, $sql);
-    echo "Result: " . $result;
+    echo "Result: " . $result . "<br>";
     // if (mysqli_num_rows($result) > 0) {
     //     while ($row = mysqli_fetch_assoc($result)) {
     //         echo "Content: " . $row["topic_CONTENT"] . "<br>";
