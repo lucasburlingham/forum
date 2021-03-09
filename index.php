@@ -345,7 +345,7 @@ function displayPost($topic_ID)
     require_once "config.php";
     echo "The topic ID is: " . $topic_ID . "<br>";
     $sql = "SELECT * FROM xenonmcx_xframe.content where `topic_ID` = 1";
-    echo $sql;
+    echo $sql . "<br>";
     // $result = mysqli_query($conn, $sql);
     // mysqli_fetch_all($result, MYSQLI_ASSOC);
     // mysqli_free_result($result);
@@ -361,6 +361,7 @@ function displayPost($topic_ID)
     //     echo "0 results";
     // }
     $row = mysqli_fetch_assoc($result);
+    echo $row . "<br>";
     echo "Result: " . $result;
     echo $row["topic_CONTENT"];
 }
