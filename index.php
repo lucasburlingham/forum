@@ -3,6 +3,7 @@
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
+    echo $topic_ID;
     displayPost($topic_ID);
 } else {
 ?>
@@ -354,7 +355,7 @@ function displayPost($topic_ID)
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "Name: " . $row["name"] . "<br>";
+            echo "Content: " . $row["topic_CONTENT"] . "<br>";
         }
     } else {
         echo "0 results";
