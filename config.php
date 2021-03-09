@@ -5,7 +5,7 @@ define('DB_PASSWORD', 'lcauser-LB1');
 define('DB_NAME', 'xenonmcx_xframe');
 
 /* Attempt to connect to MySQL database */
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 
 // echo DB_SERVER . DB_USERNAME . DB_PASSWORD . DB_NAME;
 echo "<br>";

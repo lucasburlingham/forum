@@ -344,7 +344,7 @@ function displayPost($topic_ID)
 {
     require_once "config.php";
     echo "The topic ID is: " . $topic_ID . "<br>";
-    $sql = "SELECT * FROM `content` where `topic_ID` = $topic_ID";
+    $sql = "SELECT * FROM xenonmcx_xframe.content where `topic_ID` = 1";
     echo $sql;
     // $result = mysqli_query($conn, $sql);
     // mysqli_fetch_all($result, MYSQLI_ASSOC);
