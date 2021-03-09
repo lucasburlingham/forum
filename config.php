@@ -4,6 +4,8 @@ define('DB_USERNAME', 'phpmyadmin');
 define('DB_PASSWORD', 'lcauser-LB1');
 define('DB_NAME', 'xenonmcx_xframe');
 
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 /* Attempt to connect to MySQL database */
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 
