@@ -210,8 +210,8 @@ if (isset($_GET['ID'])) {
     Hey everyone! This is the first post ever! 
     I would like to run some tests.
     Obviously, there is some text here. There is a line break. There is some more text.
-    Here is a link: (https://github.com)[Github.com]. Our goal is to make it so you only see: Github.com, and not what I
-    said before.
+    Here is a link: [Github.com](https://github.com). Our goal is to make it so you only see: Github.com, and not what I
+    actually typed.
 
 
     Well, au revoir peeps!
@@ -344,7 +344,7 @@ function displayPost($topic_ID)
     require_once "config.php";
     $sql = "SELECT * FROM xenonmcx_xframe.content where topic_ID = $topic_ID";
     echo $sql;
-    $result = mysqli_query($con, $sql);
+    $result = mysqli_query($conn, $sql);
 
     mysqli_fetch_all($result, MYSQLI_ASSOC);
     mysqli_free_result($result);
