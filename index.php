@@ -342,11 +342,21 @@ if (isset($_GET['ID'])) {
 function displayPost($topic_ID)
 {
     require_once "config.php";
-    $sql = "SELECT * FROM xenonmcx_xframe.content where topic_ID = $topic_ID";
-    echo $sql;
+    $sql = "SELECT * FROM xenonmcx_xframe.content WHERE topic_ID = $topic_ID";
+    // echo $sql;
+    // $result = mysqli_query($conn, $sql);
+    // mysqli_fetch_all($result, MYSQLI_ASSOC);
+    // mysqli_free_result($result);
+    // echo $result;
+    echo 'Connected successfully<br>';
+    $sql = 'SELECT name FROM tutorials_inf';
     $result = mysqli_query($conn, $sql);
 
-    mysqli_fetch_all($result, MYSQLI_ASSOC);
-    mysqli_free_result($result);
-    echo $result;
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "Name: " . $row["name"] . "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
 }
