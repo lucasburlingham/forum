@@ -420,7 +420,7 @@ function displayPost($topic_ID)
                     <div class="col-sm-1 col-md-3">
                     </div>
                     <div class="col-sm-10 col-md-6">
-                        <div class="card bg-dark  padding-top padding-bottom">
+                        <div class="card bg-dark my-5">
                             <div class="card-header">
                                 <h5 class="card-title text-success"><?php echo $row["topic_NAME"]; ?></h5>
                                 <small><?php
