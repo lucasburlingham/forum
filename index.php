@@ -351,7 +351,8 @@ function displayPost($topic_ID)
     $result = mysqli_query($conn, $sql);
     echo "Result: " . $result . "<br>";
     $row = mysqli_fetch_assoc($result);
-    var_dump($row);
+    var_dump($result);
+    echo mysqli_error($conn);
     echo "Result: " . $result;
     echo $row["topic_CONTENT"];
 }
