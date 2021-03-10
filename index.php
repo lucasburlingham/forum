@@ -360,7 +360,7 @@ function displayPost($topic_ID)
         <!-- load sheet then javascript -->
         <link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
         <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
-        <title>XForum: <?php echo $row["topic_TITLE"]; ?></title>
+        <title>XForum: <?php echo $row["topic_NAME"]; ?></title>
         <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
     </head>
 
