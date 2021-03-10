@@ -349,7 +349,7 @@ function displayPost($topic_ID)
 
     echo 'Connected successfully<br>';
     $result = mysqli_query($conn, $sql);
-    echo "Result: " . $result . "<br>";
+    // echo "Result: " . $result . "<br>";
     $row = mysqli_fetch_assoc($result);
     var_dump($result);
     echo mysqli_error($conn);
