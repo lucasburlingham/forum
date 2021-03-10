@@ -390,7 +390,7 @@ function displayPost($topic_ID)
                             </div>
                         </li>
                         <?php
-                        if (isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+                        if ($_SESSION["loggedin"] || $_SESSION["loggedin"] !== true && $_SESSION["username"] != NULL) {
                         ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?></a>
@@ -417,9 +417,9 @@ function displayPost($topic_ID)
         <section id="template">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-1 col-md-3">
+                    <div class="col-sm-1 col-md-2">
                     </div>
-                    <div class="col-sm-10 col-md-6">
+                    <div class="col-sm-10 col-md-8">
                         <div class="card bg-dark my-5">
                             <div class="card-header">
                                 <h5 class="card-title text-success"><?php echo $row["topic_NAME"]; ?></h5>
@@ -435,7 +435,7 @@ function displayPost($topic_ID)
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1 col-md-3">
+                    <div class="col-sm-1 col-md-2">
                     </div>
                 </div>
             </div>
