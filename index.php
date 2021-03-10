@@ -1,6 +1,5 @@
 <?php
 
-require 
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
