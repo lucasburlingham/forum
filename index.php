@@ -423,7 +423,7 @@ function displayPost($topic_ID)
                         <div class="card bg-dark">
                             <div class="card-header">
                                 <h5 class="card-title"><?php echo $row["topic_NAME"]; ?></h5>
-                                <small><?php echo $row["topic_DATE"]; ?></small>
+                                <small><?php echo date_format($row["topic_DATE"], 'jS F Y \a\t g:ia'); ?></small>
                             </div>
                             <div class="card-body">
                                 <p class="card-text"><?php echo date("F jS, Y", strtotime($row["topic_CONTENT"])); ?></p>
