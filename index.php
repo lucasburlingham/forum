@@ -2,6 +2,7 @@
 
 
 if (isset($_GET['ID'])) {
+    session_start();
     $topic_ID = $_GET['ID'];
     displayPost($topic_ID);
 } else {
