@@ -346,7 +346,6 @@ function displayPost($topic_ID)
     $sql = "SELECT * FROM xenonmcx_xframe.content where `topic_ID` = $topic_ID";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-
 ?>
 
     <!DOCTYPE html>

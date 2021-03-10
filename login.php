@@ -1,7 +1,5 @@
 <?php
 
-require_once "auth.php";
-
 // Include config file
 require_once "config.php";
 define("RECAPTCHA_V3_SECRET_KEY", '6Lek93QaAAAAAGPoQfYX2Z3HD0mtFEHWv27oL6Bv');
