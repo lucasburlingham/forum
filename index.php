@@ -415,6 +415,7 @@ function displayPost($topic_ID)
 
 
 
+
         <section id="footer">
             <footer class="bg-dark padding-up padding-bottom">
                 <div class="container">
@@ -439,7 +440,7 @@ function displayPost($topic_ID)
                             </ul>
                         </div>
                         <div class="col-sm-12 col-md-5 col-lg-5">
-                            <table class="padding-bottom">
+                            <table class="padding-bottom text-light">
                                 <tr>
                                     <th>
                                         <b>Status:</b>
