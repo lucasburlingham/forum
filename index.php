@@ -3,7 +3,6 @@
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
-    echo "The topic ID is: " . $topic_ID . "<br>";
     displayPost($topic_ID);
 } else {
 ?>
