@@ -1,6 +1,7 @@
 <?php
 
 
+
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
     displayPost($topic_ID);
@@ -345,6 +346,7 @@ function displayPost($topic_ID)
     $sql = "SELECT * FROM xenonmcx_xframe.content where `topic_ID` = $topic_ID";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+    var_dump($row);
 ?>
 
     <!DOCTYPE html>
