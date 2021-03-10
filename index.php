@@ -1,6 +1,6 @@
 <?php
 
-
+require 
 
 if (isset($_GET['ID'])) {
     $topic_ID = $_GET['ID'];
@@ -390,7 +390,7 @@ function displayPost($topic_ID)
                             </div>
                         </li>
                         <?php
-                        if (isset($_SESSION["username"])) {
+                        if (isset($_SESSION["loggedin"])) {
                         ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?></a>
