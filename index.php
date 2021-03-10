@@ -397,6 +397,7 @@ function displayPost($topic_ID)
                                 <div class="dropdown-menu bg-dark" aria-labelledby="accountDropdown">
                                     <a href="profile.php" class="btn btn-success btn-sm btn-block">Personal Profile</a>
                                     <a href="settings.php" class="btn btn-success btn-sm btn-block">Manage Your Settings</a>
+                                    <br>
                                     <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
                                 </div>
                             </li>
