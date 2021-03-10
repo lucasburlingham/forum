@@ -393,8 +393,8 @@ function displayPost($topic_ID)
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?></a>
                                 <div class="dropdown-menu bg-dark" aria-labelledby="accountDropdown">
-                                    <a href="profile.php" class="btn btn-info">Personal Profile</a>
-                                    <a href="settings.php" class="btn btn-info">Manage Your Settings</a>
+                                    <a href="profile.php" class="btn btn-success btn-sm btn-block">Personal Profile</a>
+                                    <a href="settings.php" class="btn btn-success btn-sm btn-block">Manage Your Settings</a>
                                     <hr>
                                     <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
                                 </div>
@@ -403,7 +403,7 @@ function displayPost($topic_ID)
                         } else {
                         ?>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-outline-success" href="login.php">Login </a>
+                                <a class="nav-link btn btn-outline-success" href="login.php">Login</a>
                             </li>
                         <?php }
                         ?>
