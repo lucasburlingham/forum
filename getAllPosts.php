@@ -1,6 +1,6 @@
 <?php
 require_once "config.php";
-$result = mysqli_query($conn, "SELECT * FROM `content` ORDER BY `topic_DATE` DESC;");
+$result = mysqli_query($conn, "SELECT * FROM `content` ORDER BY `topic_DATE` ASC;");
 
 while ($row = mysqli_fetch_array($result)) {
 
