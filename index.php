@@ -213,43 +213,45 @@ if (isset($_GET['ID'])) {
                 </div>
             </div>
         </section>
-        <section id="goals">
-            <div class="jumbotron bg-secondary">
-                <h1 class="text-light">Our Goals: First Release</h1>
-                <ul>
-                    <li class="text-light">Custom Markdown Support:</li>
-                    <div class="rounded-black">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <pre class="bg-dark">
+        <section id="template">
+            <?php
+            require_once "config.php";
+            $result = mysqli_query($conn, "SELECT * FROM `content` ORDER BY `topic_DATE` ASC;");
 
+            while ($row = mysqli_fetch_array($result)) {
 
-    Hey everyone! This is the first post ever! 
-    I would like to run some tests.
-    Obviously, there is some text here. There is a line break. There is some more text.
-    Here is a link: [Github.com](https://github.com). Our goal is to make it so you only see: Github.com, and not what I
-    actually typed.
-
-
-    Well, au revoir peeps!
-
-    Lucas Burlingham,
-          Database, Server, and Project Manager, as well as Frontend developer.
-
-                        </pre>
+            ?>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1 col-md-2">
+                        </div>
+                        <div class="col-sm-10 col-md-8">
+                            <div class="card bg-dark my-5">
+                                <div class="card-header">
+                                    <h5 class="card-title text-success"><?php echo $row["topic_NAME"]; ?></h5>
+                                    <span class="float-right"><?php echo $row["topic_CREATORID"]; ?></span>
+                                    <small>
+                                        <?php
+                                        $date = date_create($row["topic_DATE"]);
+                                        echo date_format($date, 'jS F Y \a\t g:ia'); ?></small>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text"><?php echo $row["topic_CONTENT"]; ?></p>
+                                </div>
+                                <div class="card-footer">
+                                    <small><span class="text-danger"><?php echo $row["topic_REP"]; ?></span> </small>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-1 col-md-2">
+                        </div>
                     </div>
-                    <li class="text-light">Basic Forum</li>
-                    <small class="text-light">
-                        Yeah. Basically think Reddit, but not as nice and refined.
-                    </small>
+                </div>
 
-                </ul>
 
-            </div>
+            <?php
+            }
+            ?>
         </section>
         <section id="footer">
             <footer class="bg-dark padding-up padding-bottom">
