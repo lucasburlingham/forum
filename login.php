@@ -2,7 +2,6 @@
 
 // Include config file
 require_once "config.php";
-define("RECAPTCHA_V3_SECRET_KEY", '6Lek93QaAAAAAGPoQfYX2Z3HD0mtFEHWv27oL6Bv');
 
 // Define variables and initialize with empty values
 $username = $password = $theme = "";
@@ -92,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" async>
-    <link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/css/darkbs.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
     <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/x-icon" />
 
