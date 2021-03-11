@@ -11,13 +11,13 @@ while ($row = mysqli_fetch_array($result)) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
+        <meta name="Description" content="<?php echo $row["topic_NAME"] . "... And other posts on the XenonMC Forum"; ?>" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" async>
         <!-- load sheet then javascript -->
         <link rel="stylesheet/less" type="text/css" href="assets/css/styles.less" />
         <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
-        <title>XForum: <?php echo $row["topic_NAME"]; ?></title>
+        <title>XForum: <?php echo $row["topic_NAME"] . "..."; ?></title>
         <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
     </head>
 
@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_array($result)) {
                                 <p class="card-text"><?php echo $row["topic_CONTENT"]; ?></p>
                             </div>
                             <div class="card-footer">
-                                <small>Reputation: <?php echo $row["topic_REP"]; ?></small>
+                                <small><span class="text-warning"><?php echo $row["topic_REP"]; ?></span> </small>
                             </div>
                         </div>
                     </div>
