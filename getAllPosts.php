@@ -31,9 +31,11 @@ while ($row = mysqli_fetch_array($result)) {
                         <div class="card bg-dark my-5">
                             <div class="card-header">
                                 <h5 class="card-title text-success"><?php echo $row["topic_NAME"]; ?></h5>
-                                <small><?php
-                                        $date = date_create($row["topic_DATE"]);
-                                        echo date_format($date, 'jS F Y \a\t g:ia'); ?></small>
+                                <span class="float-right"><?php echo $row["topic_CREATORID"]; ?></span>
+                                <small>
+                                    <?php
+                                    $date = date_create($row["topic_DATE"]);
+                                    echo date_format($date, 'jS F Y \a\t g:ia'); ?></small>
                             </div>
                             <div class="card-body">
                                 <p class="card-text"><?php echo $row["topic_CONTENT"]; ?></p>
