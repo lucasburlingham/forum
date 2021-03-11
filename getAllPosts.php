@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_array($result)) {
                                 <p class="card-text"><?php echo $row["topic_CONTENT"]; ?></p>
                             </div>
                             <div class="card-footer">
-                                <small><span class="text-warning"><?php echo $row["topic_REP"]; ?></span> </small>
+                                <small><span class="text-danger"><?php echo $row["topic_REP"]; ?></span> </small>
                             </div>
                         </div>
                     </div>
