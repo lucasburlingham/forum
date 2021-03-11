@@ -48,9 +48,26 @@ if (isset($_GET['ID'])) {
                                 <a class="dropdown-item text-github" href="https://github.com/xenonmc-dev"><i class="fab fa-github-square"></i> Github</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-success" href="login.php">Login</a>
-                        </li>
+                        <?php
+                        if ($_SESSION["loggedin"] || $_SESSION["loggedin"] !== true && $_SESSION["username"] != NULL) {
+                        ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION["username"]); ?></a>
+                                <div class="dropdown-menu bg-dark" aria-labelledby="accountDropdown">
+                                    <a href="profile.php" class="btn btn-success btn-sm btn-block">Personal Profile</a>
+                                    <a href="settings.php" class="btn btn-success btn-sm btn-block">Manage Your Settings</a>
+                                    <br>
+                                    <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+                                </div>
+                            </li>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-success" href="login.php">Login</a>
+                            </li>
+                        <?php }
+                        ?>
                     </ul>
                 </div>
             </nav>
