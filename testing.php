@@ -1,11 +1,10 @@
     <?php
-if(isset($_POST['submit'])) 
-{ 
-    $name = $_POST['name'];
-    echo "User Has submitted the form and entered this name : <b> $name </b>";
-    echo "<br>You can use the following form again to enter a new name."; 
-}
-?>
+    if (isset($_POST['submit'])) {
+        $name = $_POST['name'];
+        echo "User Has submitted the form and entered this name : <b> $name </b>";
+        echo "<br>You can use the following form again to enter a new name.";
+    }
+    ?>
 
     <!DOCTYPE html>
     <html lang="en">
@@ -13,10 +12,8 @@ if(isset($_POST['submit']))
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Description"
-            content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <meta name="Description" content="Homepage of the XENONMC Development Team. Meet our team members and connect to our growing community." />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" async>
         <!-- load sheet then javascript -->
         <link rel="stylesheet/less" type="text/css" href="assets/css/darkbs.less" />
@@ -35,8 +32,7 @@ if(isset($_POST['submit']))
                         <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST" name="newPost">
                             <div class="form-group">
                                 <label for="titleInput" class="text-light">Post Title:</label>
-                                <input type="text" class="form-control" id="titleInput" placeholder="My Fav. Candy"
-                                    name="title">
+                                <input type="text" class="form-control" id="titleInput" placeholder="My Fav. Candy" name="title">
                             </div>
 
                             <div class="form-group">
