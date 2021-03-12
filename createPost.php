@@ -17,7 +17,7 @@ while ($row = mysqli_fetch_array($result)) {
         <!-- load sheet then javascript -->
         <link rel="stylesheet/less" type="text/css" href="assets/css/darkbs.less" />
         <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
-        <title>XForum: <?php echo $row["topic_NAME"] . "..."; ?></title>
+        <title>XForum: Create Post</title>
         <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/x-icon">
     </head>
 
@@ -28,20 +28,19 @@ while ($row = mysqli_fetch_array($result)) {
                     <div class="col-sm-1 col-md-2">
                     </div>
                     <div class="col-sm-10 col-md-8">
-                        <div class="card bg-dark my-5">
-                            <div class="card-header">
-                                <h5 class="card-title text-success"><?php echo $row["topic_NAME"]; ?></h5>
-                                <small><?php
-                                        $date = date_create($row["topic_DATE"]);
-                                        echo date_format($date, 'jS F Y \a\t g:ia'); ?></small>
+                        <form>
+                            <div class="form-group">
+                                <label for="titleInput">Post Title:</label>
+                                <input type="email" class="form-control" id="titleInput" placeholder="My Fav. Candy">
                             </div>
-                            <div class="card-body">
-                                <p class="card-text"><?php echo $row["topic_CONTENT"]; ?></p>
+
+                            <div class="form-group">
+                                <label for="messageInput">Your Message to the Community here...</label>
+                                <textarea class="form-control" id="messageInput" rows="4"></textarea>
                             </div>
-                            <div class="card-footer">
-                                <small><span class="text-danger"><?php echo $row["topic_REP"]; ?></span> </small>
-                            </div>
-                        </div>
+                            <button type="submit" class="btn btn-success">Submit</button>
+
+                        </form>
                     </div>
                     <div class="col-sm-1 col-md-2">
                     </div>
