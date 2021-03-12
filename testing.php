@@ -7,7 +7,7 @@
         echo "<br>";
         echo "Content: $content";
 
-        $sql = "INSERT INTO `content` (`topic_ID`, `topic_USERNAME`, `topic_DATE`, `topic_CREATORID`, `topic_REP`, `topic_NAME`, `topic_CONTENT`) VALUES (4, 'simondanerd', CURRENT_TIMESTAMP, '1', '1', $title, $content)";
+        $sql = "INSERT INTO `content` (`topic_ID`, `topic_USERNAME`, `topic_DATE`, `topic_CREATORID`, `topic_REP`, `topic_NAME`, `topic_CONTENT`) VALUES (NULL, 'simondanerd', CURRENT_TIMESTAMP, '1', '1', $title, $content)";
         mysqli_query($conn, $sql);
     }
     ?>
