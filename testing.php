@@ -2,7 +2,7 @@
     require_once "config.php";
     if (isset($_POST['submit'])) {
         $title = $_POST['title'];
-        $content = $_SESSION['content'];
+        $content = $_POST['content'];
         echo "Title: $title";
         echo "<br>";
         echo "Content: $content";
