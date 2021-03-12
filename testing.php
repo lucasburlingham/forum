@@ -2,10 +2,11 @@
     require_once "config.php";
     if (isset($_POST['submit'])) {
         $title = $_POST['title'];
+        $content = $_SESSION['content'];
         echo "User Has submitted the form and entered this name : <b> $title </b>";
         echo "<br>You can use the following form again to enter a new name.";
 
-        $sql = "INSERT INTO `content` (`topic_ID`, `topic_USERNAME`, `topic_DATE`, `topic_CREATORID`, `topic_REP`, `topic_NAME`, `topic_CONTENT`) VALUES (NULL, \'simondanerd\', CURRENT_TIMESTAMP, \'1\', \'1\', \'Test1\', \'asdfasdfas dfasd f\\r\\n\\r\\nas\\r\\nd\\r\\nf\\r\\na sd\\r\\nf\\r\\nas\\r\\nd\\r\\n\\r\\n<br>\\r\\n\\r\\n\\r\\nasdfasdf\\r\\n\\r\\n<a href=\\\"https://google.com\\\">Google.com</a>\')";
+        $sql = "INSERT INTO `content` (`topic_ID`, `topic_USERNAME`, `topic_DATE`, `topic_CREATORID`, `topic_REP`, `topic_NAME`, `topic_CONTENT`) VALUES (NULL, \'simondanerd\', CURRENT_TIMESTAMP, \'1\', \'1\', \'Test1\', $content)";
         mysqli_query($conn, $sql);
     }
     ?>
